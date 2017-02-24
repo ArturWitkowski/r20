@@ -8,6 +8,7 @@ function Column(id, name) {
 	function createColumn() {
 		// TWORZENIE NOWYCH WĘZŁÓW
 		var column = $('<div class="column"></div>');
+		column.attr('data-id', self.id);
 		var columnTitle = $('<h2 class="column-title">' + self.name + '</h2>');
 		var columnCardList = $('<ul class="card-list"></ul>');
 		var columnDelete = $('<button class="btn-delete">x</button>');
@@ -34,11 +35,6 @@ function Column(id, name) {
 			}); 
 		});
 		
-		  column.mouseup(function() {
-			  $( this ).append( "<span style='color:#f00;'>Mouse up."+self.id +"</span>" );
-		  });
-		
-		
 		columnAddCard.click(function(event) {
 			var cardName = prompt("Wpisz nazwę karty");
 			event.preventDefault();
@@ -49,8 +45,8 @@ function Column(id, name) {
 					name: cardName,
 					bootcamp_kanban_column_id: self.id
 				},
-				success: function() {
-					var card = new Card(Response.id, cardName, self.id);
+				success: function(response) {
+					var card = new Card(response.id, cardName, self.id);
 					self.createCard(card);
 				}
 			});

@@ -9,6 +9,7 @@ function Card(id, name, column) {
 
 	function createCard() {
 		var card = $('<li class="card"></li>');
+		card.attr('data-card-id', self.id);
 		var cardDeleteBtn = $('<button class="btn-delete">x</button>');
 		var cardDescription = $('<p class="card-description"></p>');
 		
@@ -28,7 +29,6 @@ function Card(id, name, column) {
 					bootcamp_kanban_column_id: self.column
 				},
 				success: function(response){
-					//console.log("curr_col "+self.bootcamp_kanban_column_id);
 					cardDescription.text(newDesc); 
 				} 
 			}); 

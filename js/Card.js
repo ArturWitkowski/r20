@@ -28,7 +28,7 @@ function Card(id, name, column) {
 					bootcamp_kanban_column_id: self.column
 				},
 				success: function(response){
-					console.log("curr_col "+self.bootcamp_kanban_column_id);
+					//console.log("curr_col "+self.bootcamp_kanban_column_id);
 					cardDescription.text(newDesc); 
 				} 
 			}); 

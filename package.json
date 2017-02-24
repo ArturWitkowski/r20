@@ -1,0 +1,27 @@
+{
+  "name": "kodilla-zadanie9.3",
+  "version": "1.0.0",
+  "description": "jq tablica kanban",
+  "main": "index.js",
+  "dependencies": {
+    "grunt-cli": "^1.2.0"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  },
+  "scripts": {
+    "test": "kodilla-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "none"
+  },
+  "keywords": [
+    "jq kanban"
+  ],
+  "author": "Artur Witkowski",
+  "license": "ISC"
+}

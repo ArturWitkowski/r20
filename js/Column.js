@@ -36,6 +36,7 @@ function Column(id, name) {
 		
 		  column.mouseup(function() {
 			  $( this ).append( "<span style='color:#f00;'>Mouse up."+self.id +"</span>" );
+			  
 		  });
 		
 		

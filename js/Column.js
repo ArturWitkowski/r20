@@ -35,15 +35,7 @@ function Column(id, name) {
 			}); 
 		});
 		
-<<<<<<< HEAD
-		  column.mouseup(function() {
-			  $( this ).append( "<span style='color:#f00;'>Mouse up."+self.id +"</span>" );
-			  
-		  });
-		
-		
-=======
->>>>>>> 2b536b24aa43fccc926282d862c5b282dfacb2ab
+
 		columnAddCard.click(function(event) {
 			var cardName = prompt("Wpisz nazwę karty");
 			event.preventDefault();
